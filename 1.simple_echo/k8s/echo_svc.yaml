@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo_server-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8000
+    targetPort: echo_port
+    protocol: TCP
+  selector:
+    app: echo_server
