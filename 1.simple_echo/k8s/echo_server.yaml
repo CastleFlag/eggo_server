@@ -4,7 +4,7 @@ metadata:
   name: echoserver
 spec:
   containers:
-  - name: echo_server
+  - name: echo-server
     image: castleflag/eggo_server:1.0
     ports:
     - containerPort: 8000
