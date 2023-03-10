@@ -1,13 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: echoserver.example.com
-  labels:
-    app: echo_server
+  name: echoserver
 spec:
   containers:
-  - image: castleflag/eggo_server:1.0
-    name: echo_server
+  - name: echo_server
+    image: castleflag/eggo_server:1.0
     ports:
-    - name: echo_port
-      containerPort: 8000
+    - containerPort: 8000
