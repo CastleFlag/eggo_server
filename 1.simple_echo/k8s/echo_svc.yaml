@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: echoserver-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
-  - port: 8000
-    targetPort: 8000
-    protocol: TCP
+  - targetPort: 8000
+    port: 8000
+    nodePort: 30001
   selector:
-    name: echoserver
+    app: server

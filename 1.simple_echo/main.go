@@ -8,7 +8,7 @@ import (
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		log.Println("request")
-		w.Write([]byte("hello wolrd"))
+		w.Write([]byte("hello wolrd\n"))
 	})
 	http.ListenAndServe(":8000", nil)
 }
