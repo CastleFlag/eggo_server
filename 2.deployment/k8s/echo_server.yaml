@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: server
+spec:
+  containers:
+  - name: echo-server
+    image: castleflag/eggo_server:1.0
+    ports:
+    - containerPort: 8000
