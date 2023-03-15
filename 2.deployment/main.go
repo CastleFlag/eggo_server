@@ -15,7 +15,7 @@ func getIP() string {
 
 func echoHandler(w http.ResponseWriter, req *http.Request) {
 	log.Println("request")
-	w.Write([]byte("hello wolrd " + getIP()))
+	w.Write([]byte("hello wolrd " + getIP() + "\n"))
 }
 
 func main() {
